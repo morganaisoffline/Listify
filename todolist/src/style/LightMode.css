@@ -1,0 +1,33 @@
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+
+body.light-mode .task {
+    background-color: #ffffff;
+    border: 1px solid #393030;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+body.light-mode .task:hover {
+    background-color: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+
+body.light-mode .task:hover p{
+    color:rgb(255, 255, 255);
+}
+
+body.light-mode .taskbar {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+body.light-mode .task p {
+  color: black;
+}
