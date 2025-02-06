@@ -1,0 +1,24 @@
+.task {
+  background-color: #414040;
+  border: 1px solid #393030;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.task:hover p{
+    color:black;
+}
+
+.task p {
+  margin: 0;
+  font-size: 16px;
+  color: #ffffff;
+}

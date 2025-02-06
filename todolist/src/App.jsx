@@ -11,12 +11,16 @@ function App() {
     setTasks([...tasks, inputValue]);
   };
 
+  const handleRemoveTask = (index) => {
+    setTasks(tasks.filter((_, i) => i !== index));
+  };
+
   return (
     <div className="app">
       <Title />
       <Taskbar onInputChange={handleInputChange} />
       {tasks.map((task, index) => (
-        <Task key={index} taskContent={task} />
+        <Task key={index} taskContent={task} onRemove={() => handleRemoveTask(index)} />
       ))}
     </div>
   );

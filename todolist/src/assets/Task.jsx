@@ -1,13 +1,12 @@
 import React from "react";
-import Taskbar from "./Taskbar";
+import "../style/Task.css";
 
-function Task({ taskContent }) {
+function Task({ taskContent, onRemove }) {
   return (
-    <div className="task">
-
+    <div className="task" onClick={onRemove}>
       <p>{taskContent}</p>
     </div>
   );
 }
 
-export default Task
+export default Task;
