@@ -1,0 +1,20 @@
+{
+  "name": "react-todolist",
+  "version": "1.0.0",
+  "description": "A simple React ToDo List application",
+  "main": "src/App.jsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "vite": "^2.6.4"
+  },
+  "author": "",
+  "license": "ISC"
+}
