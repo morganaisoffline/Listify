@@ -12,14 +12,14 @@ function Taskbar({ onInputChange }) {
       }
       onInputChange(event.target.value);
       event.target.value = "";
-      event.target.style.minWidth = "150px"; // Reset width after adding task
+      event.target.style.minWidth = "20rem"; // Reset width after adding task
     }
-    event.target.style.minWidth = Math.max(150, (event.target.value.length + 1) * 7) + "px";
+    event.target.style.minWidth = Math.max(320, (event.target.value.length + 1) * 7) + "px";
   };
 
   const handleFocus = (event) => {
     setPlaceholder("Add a task...");
-    event.target.style.minWidth = Math.max(150, (event.target.value.length + 1) * 7) + "px";
+    event.target.style.minWidth = Math.max(320, (event.target.value.length + 1) * 7) + "px";
   };
 
   const handleBlur = (event) => {
@@ -35,7 +35,7 @@ function Taskbar({ onInputChange }) {
       onKeyDown={handleKeyDown}
       onFocus={handleFocus}
       onBlur={handleBlur}
-      style={{ minWidth: "150px" }} // Default minimum width
+      style={{ minWidth: "20rem" }} // Default minimum width
     />
   );
 }
