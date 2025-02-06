@@ -1,4 +1,4 @@
-# React ToDoList
+# Listify
 
 ## Overview
 A Simple, Easy To-Do List app made with React. 
