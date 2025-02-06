@@ -1,7 +1,10 @@
 # Listify
 
+![App Screenshot](https://i.imgur.com/MFX5dlu.png)
+
 ## Overview
 A Simple, Easy To-Do List app made with React. 
+
 
 ## Features
 
