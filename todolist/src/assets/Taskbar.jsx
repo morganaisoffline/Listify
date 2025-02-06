@@ -1,7 +1,15 @@
 import "../style/Taskbar.css";
+import { useState } from "react";
 
-function Taskbar() {
+
+
+function Taskbar({ onInputChange }) {
+
   const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        onInputChange(event.target.value);
+    }
     event.target.style.minWidth = ((event.target.value.length + 1) * 7) + 'px';
   };
 

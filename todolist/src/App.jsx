@@ -1,20 +1,24 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import React, { useState } from "react";
 import "./App.css";
-import Taskbar from "./assets/Taskbar.jsx";
+import Taskbar from "./assets/Taskbar";
 import Title from "./assets/Title.jsx";
+import Task from "./assets/Task";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [tasks, setTasks] = useState([]);
+
+  const handleInputChange = (inputValue) => {
+    setTasks([...tasks, inputValue]);
+  };
 
   return (
-    <>
-      <div className="root">
-        <Title />
-        <Taskbar />
-        </div>
-    </>
+    <div className="app">
+      <Title />
+      <Taskbar onInputChange={handleInputChange} />
+      {tasks.map((task, index) => (
+        <Task key={index} taskContent={task} />
+      ))}
+    </div>
   );
 }
 
