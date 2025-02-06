@@ -4,8 +4,6 @@
 
 This is a simple and sleek to-do list application built with React. It allows users to add and remove tasks, and toggle between light and dark modes by clicking on the title.
 
-![App Screenshot](https://i.imgur.com/MFX5dlu.png)
-
 ## Features
 
 - Add tasks
