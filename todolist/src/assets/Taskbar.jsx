@@ -1,8 +1,26 @@
 import "../style/Taskbar.css";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function Taskbar({ onInputChange }) {
   const [placeholder, setPlaceholder] = useState("Tap the title to toggle between Light and Dark Mode");
+  const inputRef = useRef(null);
+
+  // Function to calculate width of placeholder text
+  const calculateWidth = (text) => {
+    const canvas = document.createElement("canvas");
+    const context = canvas.getContext("2d");
+    context.font = "16px Arial";  // Adjust this font to match the taskbar input style
+    const textWidth = context.measureText(text).width;
+    return Math.max(320, textWidth + 16); // Ensure a minimum width of 320px
+  };
+
+  // Adjust initial width based on placeholder text
+  useEffect(() => {
+    if (inputRef.current) {
+      const initialWidth = calculateWidth(placeholder);
+      inputRef.current.style.minWidth = `${initialWidth}px`;
+    }
+  }, [placeholder]);
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
@@ -29,6 +47,7 @@ function Taskbar({ onInputChange }) {
 
   return (
     <input
+      ref={inputRef}
       type="text"
       className="taskbar"
       placeholder={placeholder}
